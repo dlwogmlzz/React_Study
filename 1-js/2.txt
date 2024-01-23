@@ -1,0 +1,17 @@
+[리액트는 const(상수)로 선언한다 - "불변성의 법칙"(예, a라는 기본값을 직접 바꿔서는 안된다.)]
+1. Spreading 문법(배열)
+const a = [1, 2, 3]
+const b = [...a, 4] // push(4)를 한것과 같음
+const c = [0, ...a] // unshift
+const d = a.slice(0, 2) // slice
+
+# a <-> b(a의 주소를 b로 바꾸는 작업)을 react에서는 setState라 한다.
+# a의 메모리 주소를 휘발시키고 그 자리를 b로 대체한다 -> a가 바뀌었다는 것을 그때 인지한다.(메모리 누수 방지)
+
+* 리액트는 어떤 객체화 될수 있는 모든 상수, 변수들의 변화를 감지해서 처리하는 것에 특화된 언어이다.
+(객체)
+const a2 = { id: 'abc1234', pw: '1234' } // a2 = { id: 'abc1234', pw: '1234' }
+const b2 = { ...a2, name: 'lee' } // a2에 name을 추가 b2 = { id: 'abc1234', pw: '1234', name: 'lee' }
+const c2 = { ...c2, pw: '5678' } // c2 = { id: 'abc1234', pw: '5678' } 수정
+// Destructuring 문법
+const { pw, ...d2 } = a2 // d2 = { id: 'abc1234' } // 삭제

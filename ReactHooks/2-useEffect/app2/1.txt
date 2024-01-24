@@ -1,0 +1,2 @@
+* index.js에서
+<React.StrictMode></React.StrictMode>를 꺼야지 console.log를 찍었을때, 두번씩 나오지 않는다.

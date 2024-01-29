@@ -1,0 +1,9 @@
+[ReactHooks]
+
+1. useRef
+- 언제 사용 되느냐? useRef가 유용한 2가지 상황2
+  # 2. DOM요소 접근
+  $ 대표적으로 input요소를 클릭하지 않아도, focus()를 주고 싶을때 많이 사용된다.
+  $ 로그인 화면에 ID창에 ID를 입력할때 input창을 굳이 클릭하지 않아도 자동적으로 focus()가 되게 만들수 있다.
+  $ Javascript의 Document.querySelector()와 비슷한 기능이다.
+  $ const ref = useRef(value) → <input ref={ref}> 이런식으로 ref변수를 넣어주기만 하면 해당요소에 접근이 가능하다. 
